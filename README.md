@@ -6,7 +6,15 @@ Utility for absorbance-activated droplet sorting (AADS)
 
 Code to run an Arudino Due microcontroller for AADS as updated in [Zurek et al.](https://doi.org/10.1039/D0LC00830C "Growth amplification in ultrahigh-throughput microdroplet screening increases sensitivity of clonal enzyme assays and minimizes phenotypic variation") (2020) _Lab on a Chip_.
 
-To run this script, connect the detector to the input at pin A0 and the sorting electronic to pin D13 of the arduino.
+To run the ArduinoAADS.ino script, connect the detector to the input at pin A0 and the sorting electronic to pin D13 of the arduino.
+Now set the sorting variables:
+- thresh: Voltage threshold for peak detection. Set this ~0.5V below the baseline.
+The 2D sorting gate is determined by the peak height and peak width. Droplets in the range sortVH-sortVL and peakWH-peakWL will thus be sorted.
+- sortVH: High sorting voltage threshold. Peaks lower than this value will be sorted.
+- sortVL: Low sorting voltage threshold. Peaks higher than this value will be sorted.
+- peakWH: High size threshold. Smaller droplets than this value will be sorted.
+- peakWL: Low size threshold. Droplets larger than this value will be sorted.
+
 
 ## Offline analysis with Python
 
