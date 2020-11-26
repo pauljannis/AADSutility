@@ -31,4 +31,8 @@ The output will be a visualization of the trace and a 2D plot, as shown below, a
 
 <img src="/example/scatter.png" width="505" height="307">
 
+## Stage 2: AADS_plot.py
+This script is a very simple tool to plot histograms and KDEs with the extracted peak data. To create a histogram (as shown below) use `python AADS_plot.py v_hist -i example-output.txt`. Consult the help `python AADS_plot.py -h` for more information. It is mainly useful to plot KDS overlays of droplet data, along the lines of `python AADS_plot.py v_kde -i sample1 sample2 sample3`.
+
+<img src="/example/voltage-hist.png" width="500" height="328">
 
