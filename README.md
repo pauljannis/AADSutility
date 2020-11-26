@@ -21,4 +21,4 @@ The 2D sorting gate is determined by the peak height and peak width. Droplets in
 Code to analyse recorded absorbance traces offline, e.g. to filter out fusions and create pretty histograms, can be run with the supplied python scripts. Running these scripts requires python 3 with some libraries (numpy, matplotlib, seaborn).
 
 ### Stage 1: AADS_detect.py
-Run this script to extract peak information, such as peak height and width, from a raw recording of detection signal. The detection signal needs to be in the format of voltage values with timestamps, as given in example-trace.txt. Run the peak detection with 'python AADS_detect.py midpoint example-trace.txt -o' or consult the help 'python AADS_detect.py -h'. 
+Run this script to extract peak information, such as peak height and width, from a raw recording of detection signal. The detection signal needs to be in the format of voltage values with timestamps, as given in example-trace.txt. Run the peak detection with `python AADS_detect.py midpoint example-trace.txt -o` or consult the help `python AADS_detect.py -h`. 
