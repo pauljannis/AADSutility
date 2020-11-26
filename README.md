@@ -18,12 +18,17 @@ The 2D sorting gate is determined by the peak height and peak width. Droplets in
 
 ## Offline analysis with Python
 
-Code to analyse recorded absorbance traces offline, e.g. to filter out fusions and create pretty histograms, can be run with the supplied python scripts. Running these scripts requires python 3 with some libraries (numpy, matplotlib, seaborn).
+Code to analyse recorded absorbance traces offline is supplied with the python scripts, i.e. to correctly identify the middle of the peak, to filter out fusions and create pretty histograms. In absorbance detection of droplets, the droplet interface seems to scatter light, resulting in two large peak shoulders. Accurate absorbance of the content of the droplet can be hidden between these, sometimes requiring a more elaborate detection of the true peak middle. An example where this is the case due to low absorbant droplet content is provided, the image below showing exemplary absorbance traces of droplets with shoulders.
+
+IMAGE
+
+Running these scripts requires python 3 with some libraries (numpy, matplotlib, seaborn).
 
 ### Stage 1: AADS_detect.py
-Run this script to extract peak information, such as peak height and width, from a raw recording of detection signal. The detection signal needs to be in the format of voltage values with timestamps in seconds, as given in example-trace.txt. Run the peak detection with `python AADS_detect.py midpoint example-trace.txt -o` or consult the help `python AADS_detect.py -h`. 
+Run this script to extract peak information, such as peak height and width, from a raw recording of detection signal. The detection signal needs to be in the format of voltage values with timestamps in ms, as given in example-trace.txt. Run the peak detection with `python AADS_detect.py midpoint example-trace.txt -o example-output.txt` or consult the help `python AADS_detect.py -h`. 
 
-The output will be a visualization of the trace, as in the example below, and a file with the extracted peaks.
+The output will be a visualization of the trace and a 2D plot, as shown below, and a file with the extracted peaks.
 
+IMAGE 2D
 
 
