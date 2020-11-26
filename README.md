@@ -20,7 +20,7 @@ The 2D sorting gate is determined by the peak height and peak width. Droplets in
 
 Code to analyse recorded absorbance traces offline is supplied with the python scripts, i.e. to correctly identify the middle of the peak, to filter out fusions and create pretty histograms. In absorbance detection of droplets, the droplet interface seems to scatter light, resulting in two large peak shoulders. Accurate absorbance of the content of the droplet can be hidden between these, sometimes requiring a more elaborate detection of the true peak middle. An example where this is the case due to low absorbant droplet content is provided, the image below showing exemplary absorbance traces of droplets with shoulders.
 
-IMAGE
+<img src="/example/drop.png" width="499" height="628">
 
 Running these scripts requires python 3 with some libraries (numpy, matplotlib, seaborn).
 
@@ -29,6 +29,6 @@ Run this script to extract peak information, such as peak height and width, from
 
 The output will be a visualization of the trace and a 2D plot, as shown below, and a file with the extracted peaks.
 
-IMAGE 2D
+<img src="/example/scatter.png" width="842" height="512">
 
 
